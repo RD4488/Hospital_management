@@ -38,4 +38,6 @@ app.UseSession();
 
 app.AddIndexEndPoints();
 
+app.AddAdminEndPoints();
+
 app.Run();

@@ -28,7 +28,7 @@ namespace HospitalManagement.Api.Endpoints
                     ""password"": ""string"",
                     ""confirmPassword"": ""string""
             }"))
-            .RequireAuthorization(AuthorizationPollicesEnum.AdminPanelAccess.ToString());
+            .AllowAnonymous();
 
 
             app.MapGet("/SignOut", async (HttpContext httpContext) =>

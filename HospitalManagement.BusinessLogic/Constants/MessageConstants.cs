@@ -10,7 +10,8 @@
         public const string InvalidInputs = "Invalid Input Data";
         public const string UserExist = "User Already Exist";
         public const string UserCreated = "User Created Successfully";
+        public const string UserUpdated = "User Updated Successfully";
         public const string UserSignOut = "User Signout successfully";
-
+        public const string UserNotExist = "User not exist";
     }
 }

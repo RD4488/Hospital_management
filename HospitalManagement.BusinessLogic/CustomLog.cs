@@ -10,7 +10,7 @@ namespace HospitalManagement.BusinessLogic
     {
         public static void WriteDataInTextFile(this string message)
         {
-            string fileName = @$"D:\DemoGitLab\HotelManagement\{DateTime.UtcNow.ToString("d")}_Logs.txt";
+            string fileName = @$"D:\AllProjects\DemoGitLab\HotelManagement\{DateTime.UtcNow.ToString("d")}_Logs.txt";
             File.AppendAllText(fileName, message + Environment.NewLine);
         }
     }

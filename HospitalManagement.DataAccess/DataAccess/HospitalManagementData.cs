@@ -18,6 +18,22 @@ public class HospitalManagementData : IHospitalManagementData
                                 "Default");
         return results.FirstOrDefault();
     }
+    public async Task<dynamic> UpdateUser(UserModel user)
+    {
+        var results = await sql.LoadData<dynamic, dynamic>("dbo.spUser_UpdateUser",
+                                new { user.FirstName, user.LastName, user.Email, Role = user.Role.ToString(), Password = Encrypt(user.Password) },
+                                "Default");
+        return results.FirstOrDefault();
+    }
+
+    public async Task<dynamic> DeleteUser(string email)
+    {
+        var results = await sql.LoadData<dynamic, dynamic>("dbo.spUser_DeleteUser",
+                                new { Email = email },
+                                "Default");
+        return results.FirstOrDefault();
+    }
+
     private static string Encrypt(string clearText)
     {
         string EncryptionKey = "RITESHAESKEY123";
