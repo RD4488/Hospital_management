@@ -40,4 +40,6 @@ app.AddIndexEndPoints();
 
 app.AddAdminEndPoints();
 
+app.AddDoctorEndPoints();
+
 app.Run();
